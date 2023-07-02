@@ -1,4 +1,5 @@
 import { FaStar, FaCodeBranch, FaEye } from "react-icons/fa";
+import { BsLink } from "react-icons/bs";
 
 async function fetchRepo(name) {
   const response = await fetch(
@@ -32,6 +33,11 @@ async function Repo({ name }) {
           <FaEye />
           <span>{repo.watchers_count}</span>
         </div>
+      </div>
+      <div>
+        <a href={repo?.html_url} className="btn btn-back" target="_blank">
+          Visit <BsLink />
+        </a>
       </div>
     </>
   );
