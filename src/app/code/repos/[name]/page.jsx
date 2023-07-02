@@ -3,19 +3,28 @@ import RepoDir from "@/components/RepoDir";
 import Link from "next/link";
 import React, { Suspense } from "react";
 
+// or Dynamic metadata
+export async function generateMetadata({ params: { name } }) {
+  return {
+    title: name,
+  };
+}
+
 function RepoDetailsPage({ params: { name } }) {
   return (
-    <div className="card">
-      <Link href="/code/repos" className="btn btn-back">
-        Back To Repositories
-      </Link>
-      <Suspense fallback={<div>Loading repo...</div>}>
-        <Repo name={name} />
-      </Suspense>
-      <Suspense fallback={<div>Loading directories...</div>}>
-        <RepoDir name={name} />
-      </Suspense>
-    </div>
+    <>
+      <div className="card">
+        <Link href="/code/repos" className="btn btn-back">
+          Back To Repositories
+        </Link>
+        <Suspense fallback={<div>Loading repo...</div>}>
+          <Repo name={name} />
+        </Suspense>
+        <Suspense fallback={<div>Loading directories...</div>}>
+          <RepoDir name={name} />
+        </Suspense>
+      </div>
+    </>
   );
 }
 

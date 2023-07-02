@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { FaStar, FaCodeBranch, FaEye } from "react-icons/fa";
 
+export const metadata = {
+  title: "Repository",
+};
+
 const getRepos = async () => {
   const fetchRepos = await fetch(`${process.env.REPO_URL}`, {
     next: {
