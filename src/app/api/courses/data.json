@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "React Course",
+    "description": "Learn Modern React, Including Hooks, Context API, Full Stack MERN & Redux By Building Real Life Projects.",
+    "link": "#",
+    "level": "Beginner"
+  },
+  {
+    "id": 2,
+    "title": "Node.js API Masterclass",
+    "description": "Build an extensive RESTful API using Node.js, Express, and MongoDB",
+    "link": "#",
+    "level": "Intermediate"
+  },
+  {
+    "id": 3,
+    "title": "Modern JavaScript From The Beginning",
+    "description": "37 hour course that teaches you all of the fundamentals of modern JavaScript.",
+    "link": "#",
+    "level": "All Levels"
+  },
+  {
+    "id": 4,
+    "title": "Next.js Dev To Deployment",
+    "description": "Learn Next.js by building a music event website and a web dev blog as a static website",
+    "link": "#",
+    "level": "Intermediate"
+  },
+  {
+    "id": 5,
+    "title": "HTML Master Course",
+    "description": "Sharpen your skills by building 50 quick, unique & fun mini projects.",
+    "link": "#",
+    "level": "Beginner"
+  }
+]
