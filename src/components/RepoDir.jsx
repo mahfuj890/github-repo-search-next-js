@@ -18,7 +18,7 @@ async function fetchRepoContents(name) {
 async function RepoDir({ name }) {
   const contents = await fetchRepoContents(name);
   const dirs = contents.filter((content) => content.type === "dir");
-  console.log("🚀 ~ file: RepoDir.jsx:21 ~ RepoDir ~ dirs:", dirs);
+ 
   return (
     <>
       <h3>Directories</h3>
