@@ -3,7 +3,7 @@ import { BsLink } from "react-icons/bs";
 
 async function fetchRepo(name) {
   const response = await fetch(
-    `https://api.github.com/repos/mahfuj890/${name}`,
+    `${process.env.REPO_DIR_URL}/${name}`,
     {
       next: {
         revalidate: 60,

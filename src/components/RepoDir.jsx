@@ -4,7 +4,7 @@ async function fetchRepoContents(name) {
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const response = await fetch(
-    `https://api.github.com/repos/mahfuj890/${name}/contents`,
+    `${process.env.REPO_DIR_URL}/${name}/contents`,
     {
       next: {
         revalidate: 60,
@@ -18,7 +18,7 @@ async function fetchRepoContents(name) {
 async function RepoDir({ name }) {
   const contents = await fetchRepoContents(name);
   const dirs = contents.filter((content) => content.type === "dir");
- 
+
   return (
     <>
       <h3>Directories</h3>
