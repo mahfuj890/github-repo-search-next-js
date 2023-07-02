@@ -1,7 +1,10 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
 
 function Header() {
+  const pathName = usePathname();
+ 
   return (
     <header className="header">
       <div className="container">
@@ -9,9 +12,24 @@ function Header() {
           <Link href="/">Mahfuj Github Search</Link>
         </div>
         <div className="links">
-          <Link href="/about">About</Link>
-          <Link href="/about/team">Our Team</Link>
-          <Link href="/code/repos">Code</Link>
+          <Link
+            href="/about"
+            style={{ color: pathName === "/about" ? "red" : "white" }}
+          >
+            About
+          </Link>
+          <Link
+            href="/about/team"
+            style={{ color: pathName === "/about/team" ? "red" : "white" }}
+          >
+            Our Team
+          </Link>
+          <Link
+            href="/code/repos"
+            style={{ color: pathName.startsWith("/code") ? "red" : "white" }}
+          >
+            Code
+          </Link>
         </div>
       </div>
     </header>
